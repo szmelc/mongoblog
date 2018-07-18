@@ -5,7 +5,6 @@ class Tag
   field :slug, type: String
   field :name, type: String
 
-  # This model should be saved in the post document
   embedded_in :post
 
   validates :slug, presence: true, uniqueness: true
