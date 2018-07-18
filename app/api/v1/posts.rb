@@ -9,6 +9,14 @@ module API
         get do
           Post.all.ordered
         end
+
+        desc "Return a specific post"
+        params do
+          requires :id, type: String
+        end
+        get ':id' do
+          Post.find(params[:id])
+        end
       end
     end
   end
