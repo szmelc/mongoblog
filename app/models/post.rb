@@ -6,7 +6,6 @@ class Post
   field :title, type: String
   field :content, type: String
 
-  embeds_many :tags
   embeds_many :comments
 
   scope :ordered, -> { order('created_at DESC') }
